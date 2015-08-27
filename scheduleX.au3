@@ -20,7 +20,6 @@ Global $assignEE
 Global $fromDate
 Global $toDate
 Global $verifyDate = False
-Global $iResponse
 
 ; Binds ESC as universal stop/exit of program
 HotKeySet("{Esc}", "EscScheduleX")
@@ -75,18 +74,6 @@ Func ImportStartEE()
     $assignEE = True
     $Var = True
 
-	$iResponse = MsgBox(4, "<schedule>X ", "scheduleX � 2011 Matthew Traughber" & " " & "[matthewtraughber@gmail.com]" & _
-		@CRLF & @CRLF & "This work is licensed under the Creative Commons Attribution-NoDerivs 3.0 Unported License." & _
-		@CRLF & "To view a copy of this license, visit http://creativecommons.org/licenses/by-nd/3.0/" & _
-		@CRLF & @CRLF & "By using this software you agree to the terms above." & _
-		@CRLF &	"IF YOU DO NOT AGREE, DO NOT COPY OR USE THE SOFTWARE." & _
-		@CRLF & @CRLF & @CRLF & "                                                                    " & "AGREE?", 0)
-
-	If $iResponse = 7 Then
-		Call ("ExitScheduleX")
-	Else
-	EndIf
-
 	Do
 		$fromDate = InputBox("<schedule>X", "Generate schedules FROM what date?"  & @CRLF & @CRLF & _
 			"Format:  MM/DD/YYYY" & @CRLF & _
@@ -119,20 +106,8 @@ EndFunc
 ; Import without employee assignments
 ;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Func ImportStartNoEE()
-    $assignEE = False
+  $assignEE = False
 	$Var = True
-
-	$iResponse = MsgBox(4, "<schedule>X", "scheduleX � 2011 Matthew Traughber" & " " & "[matthewtraughber@gmail.com]" & _
-		@CRLF & @CRLF & "This work is licensed under the Creative Commons Attribution-NoDerivs 3.0 Unported License." & _
-		@CRLF & "To view a copy of this license, visit http://creativecommons.org/licenses/by-nd/3.0/" & _
-		@CRLF & @CRLF & "By using this software you agree to the terms above." & _
-		@CRLF &	"IF YOU DO NOT AGREE, DO NOT COPY OR USE THE SOFTWARE." & _
-		@CRLF & @CRLF & @CRLF & "                                                                    " & "AGREE?", 0)
-
-	If $iResponse = 7 Then
-		Call ("ExitScheduleX")
-	Else
-	EndIf
 
 EndFunc
 
