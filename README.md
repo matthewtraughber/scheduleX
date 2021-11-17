@@ -9,7 +9,7 @@ I should have done this earlier as I'm no longer working in the department, but 
 You'll need Aut2Exe to convert the script to an executable. Grab it [here](https://www.autoitscript.com/site/autoit/downloads/).
 
 ##### Aut2Exe
-![alt text](https://i.imgur.com/nZmsDm5.png "Aut2Exe configuration")
+![alt text](img/Aut2Exe.png)
 
 ## License
 Released under the [MIT license](http://opensource.org/licenses/MIT)
